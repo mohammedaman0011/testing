@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dagligvarebutik Søgning &amp; Filtre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="small"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <nav class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="h-8 w-auto" src="2207d32c-d2fc-4d70-9022-2b42deb5004b.jpg" alt="Logo"/>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="border-custom text-custom inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Butik</a>
+                        <a href="search.html" class="border-transparent text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Søg</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Tilbud</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Frisk</a>
+                        <a href="#" class="border-transparent text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Spisekammer</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <button type="button" class="p-2 rounded-full text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                    </button>
+                    <div class="ml-3 relative">
+                        <div>
+                            <button type="button" class="flex items-center max-w-xs rounded-full focus:outline-none">
+                                <img class="h-8 w-8 rounded-full" src="37d53592-af0a-4bde-a3bc-75d7a9f2349b.jpg" alt="Profile"/>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+        <div class="mb-8">
+            <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <i class="fas fa-search text-gray-400"></i>
+                </div>
+                <input type="text" class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-custom focus:border-custom" placeholder="Søg efter dagligvarer..."/>
+            </div>
+        </div>
+
+        <div class="bg-white shadow rounded-lg p-6 mb-8">
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Kategorier</label>
+                    <select class="block w-full border-gray-300 rounded-md shadow-sm focus:ring-custom focus:border-custom"><option>Alle Kategorier</option><option>Frugt &amp; Grøntsager</option><option>Mejeriprodukter</option><option>Snacks &amp; Drikkevarer</option><option>Husholdningsartikler</option></select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Prisklasse</label>
+                    <select class="block w-full border-gray-300 rounded-md shadow-sm focus:ring-custom focus:border-custom"><option>Alle Priser</option><option>Under 50 kr</option><option>50 kr - 250 kr</option><option>Over 250 kr</option></select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Sortér Efter</label>
+                    <select class="block w-full border-gray-300 rounded-md shadow-sm focus:ring-custom focus:border-custom"><option>Bedst Sælgende</option><option>Pris: Lav til Høj</option><option>Pris: Høj til Lav</option><option>Nyheder</option></select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Særlige Tilbud</label>
+                    <button type="button" class="!rounded-button inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom w-full justify-center">Se Tilbud</button>
+                </div>
+            <div><label class="block text-sm font-medium text-gray-700 mb-2">Mærke</label><select class="block w-full border-gray-300 rounded-md shadow-sm focus:ring-custom focus:border-custom"><option>Alle Mærker</option><option>Amul</option><option>Nestlé</option><option>Britannia</option></select></div><div><label class="block text-sm font-medium text-gray-700 mb-2">Availability</label><div class="flex items-center"><input type="checkbox" class="h-4 w-4 text-custom border-gray-300 rounded" id="in-stock"/><label for="in-stock" class="ml-2 text-sm text-gray-700">Skjul Udsolgte Varer</label></div></div><div><label class="block text-sm font-medium text-gray-700 mb-2">Rabatter</label><div class="flex items-center"><input type="checkbox" class="h-4 w-4 text-custom border-gray-300 rounded" id="discounted"/><label for="discounted" class="ml-2 text-sm text-gray-700">Vis Kun Tilbudsvarer</label></div></div></div>
+
+            <div class="mt-6 flex justify-end space-x-3">
+                <button type="button" class="!rounded-button inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">Ryd Alt</button>
+                <button type="button" class="!rounded-button inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-custom hover:bg-custom/90">Anvend Filtre</button>
+            </div>
+        </div>
+
+        <div class="bg-white shadow rounded-lg p-6">
+            <h2 class="text-lg font-medium text-gray-900 mb-4">Udvalgte Varer</h2>
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="border rounded-lg overflow-hidden">
+                    <img class="h-48 w-full object-cover" src="d35b70aa-96af-43b8-8c6b-b402fcfd6c18.jpg" alt="Fresh Produce"/>
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-gray-900">Økologisk Frugt og Grønt Pakke</h3>
+                        <p class="mt-1 text-sm text-gray-500">Sæsonbaseret udvalg af økologiske grøntsager</p>
+                        <div class="mt-2 flex items-center">
+                            <span class="text-custom font-medium">$24.99</span>
+                            <span class="ml-2 text-sm text-gray-500">4.8 <i class="fas fa-star text-yellow-400"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border rounded-lg overflow-hidden">
+                    <img class="h-48 w-full object-cover" src="09404e9a-887d-4fe0-abda-8409ef1a7ce8.jpg" alt="Bakery"/>
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-gray-900">Håndværksbagt Brødudvalg</h3>
+                        <p class="mt-1 text-sm text-gray-500">Friskbagt surdejsbrød og bagværk</p>
+                        <div class="mt-2 flex items-center">
+                            <span class="text-custom font-medium">$12.99</span>
+                            <span class="ml-2 text-sm text-gray-500">4.6 <i class="fas fa-star text-yellow-400"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border rounded-lg overflow-hidden">
+                    <img class="h-48 w-full object-cover" src="f5a93b37-1f5a-406d-96ad-434c51ba4886.jpg" alt="Cheese"/>
+                    <div class="p-4">
+                        <h3 class="text-sm font-medium text-gray-900">Gourmet Osteanretning</h3>
+                        <p class="mt-1 text-sm text-gray-500">Udvalg af premium håndlavet ost</p>
+                        <div class="mt-2 flex items-center">
+                            <span class="text-custom font-medium">$34.99</span>
+                            <span class="ml-2 text-sm text-gray-500">4.9 <i class="fas fa-star text-yellow-400"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><div class="bg-white shadow rounded-lg p-6 mt-8"><h2 class="text-lg font-medium text-gray-900 mb-4">Søgeresultater</h2><div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"><div class="border rounded-lg overflow-hidden"><img class="h-48 w-full object-cover" src="77064ec7-9c38-4daf-9235-203ab100729a.jpg" alt="Tomatoes"/><div class="p-4"><h3 class="text-sm font-medium text-gray-900">Økologiske Tomater</h3><p class="mt-1 text-sm text-gray-500">Friske, lokalt dyrkede</p><div class="mt-2 flex items-center"><span class="text-custom font-medium">$4.99</span><span class="ml-2 text-sm text-gray-500">4.7 <i class="fas fa-star text-yellow-400"></i></span></div></div></div><div class="border rounded-lg overflow-hidden"><img class="h-48 w-full object-cover" src="84dc4acc-a440-4c1a-bd14-7c7172e7b1dc.jpg" alt="Spinach"/><div class="p-4"><h3 class="text-sm font-medium text-gray-900">Babyspinat</h3><p class="mt-1 text-sm text-gray-500">Økologisk, forvasket</p><div class="mt-2 flex items-center"><span class="text-custom font-medium">$3.99</span><span class="ml-2 text-sm text-gray-500">4.5 <i class="fas fa-star text-yellow-400"></i></span></div></div></div><div class="border rounded-lg overflow-hidden"><img class="h-48 w-full object-cover" src="3e9a6da0-55a6-4e05-8448-b53b4eda60a8.jpg" alt="Bell Peppers"/><div class="p-4"><h3 class="text-sm font-medium text-gray-900">Blandede Peberfrugter</h3><p class="mt-1 text-sm text-gray-500">Økologisk, regnbuemix</p><div class="mt-2 flex items-center"><span class="text-custom font-medium">$5.99</span><span class="ml-2 text-sm text-gray-500">4.6 <i class="fas fa-star text-yellow-400"></i></span></div></div></div><div class="border rounded-lg overflow-hidden"><img class="h-48 w-full object-cover" src="ea8afcf1-5aa4-45b6-9b6f-e01a831e7df8.jpg" alt="Carrots"/><div class="p-4"><h3 class="text-sm font-medium text-gray-900">Økologiske Gulerødder</h3><p class="mt-1 text-sm text-gray-500">Friske, bundt</p><div class="mt-2 flex items-center"><span class="text-custom font-medium">$2.99</span><span class="ml-2 text-sm text-gray-500">4.8 <i class="fas fa-star text-yellow-400"></i></span></div></div></div></div></div>
+    </main>
+
+
+
+
+</body></html>
