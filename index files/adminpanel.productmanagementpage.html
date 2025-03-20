@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="small"></script>
+</head>
+<body class="bg-gray-50 font-[&#39;Inter&#39;]">
+    <div class="min-h-screen flex">
+        <aside class="w-64 bg-white border-r border-gray-200">
+            <div class="p-6">
+                <a href="index.html"><img src="https://ai-public.creatie.ai/gen_page/logo_placeholder.png" alt="Logo" class="h-8"/></a>
+            </div>
+            <nav class="mt-6">
+                <div class="px-4 space-y-1">
+                    <a href="adminpanelDashboard.html" class="flex items-center px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-chart-line w-5 h-5 mr-3"></i>Dashboard</a>
+                    <a href="adminpanel.productmanagementpage.html" class="flex items-center px-4 py-3 text-sm font-medium text-custom bg-indigo-50 rounded-lg"><i class="fas fa-box w-5 h-5 mr-3"></i>Produkter</a>
+                    <a href="#" class="flex items-center px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-shopping-cart w-5 h-5 mr-3"></i>Ordrer</a>
+                    <a href="#" class="flex items-center px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-users w-5 h-5 mr-3"></i>Kunder</a>
+                    <a href="#" class="flex items-center px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-chart-bar w-5 h-5 mr-3"></i>Analyser</a>
+                </div>
+            </nav>
+        </aside>
+        <div class="flex-1">
+            <header class="bg-white shadow">
+                <div class="flex items-center justify-between px-6 h-16">
+                    <h1 class="text-xl font-semibold">Produkter</h1>
+                    <div class="flex items-center space-x-4">
+                        <button class="p-2 text-gray-400 hover:text-gray-500">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                        <div class="relative">
+                            <button class="flex items-center space-x-3">
+                                <img class="h-8 w-8 rounded-full" src="https://creatie.ai/ai/api/search-image?query=A professional headshot of a business person with a warm smile, wearing a suit, against a neutral background.&width=100&height=100&orientation=squarish&flag=1b90613a-7851-456b-9286-f7e877b3577f&flag=2af26238-5d08-43bd-9116-ae2c2be2822b&flag=9778cc5d-b1cb-45aa-9679-69ce48129b5f" alt="User"/>
+                                <span class="text-sm font-medium text-gray-700">John Smith</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="p-6"><div class="mb-6 flex justify-between items-center"><h2 class="text-xl font-semibold">Alle Produkter</h2><button class="px-4 py-2 bg-custom text-white rounded-lg flex items-center"><i class="fas fa-plus mr-2"></i>Tilføj Produkt</button></div><div class="bg-white rounded-lg shadow"><div class="p-6 border-b border-gray-200"><div class="flex justify-between items-center"><div class="relative w-64"><input type="text" placeholder="Søg produkter..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom focus:border-transparent"/><i class="fas fa-search absolute left-3 top-3 text-gray-400"></i></div><div class="flex space-x-2"><button class="px-3 py-2 border border-gray-300 rounded-lg flex items-center"><i class="fas fa-filter mr-2"></i>Filtrer</button><button class="px-3 py-2 border border-gray-300 rounded-lg flex items-center"><i class="fas fa-sort mr-2"></i>Sortér</button></div></div></div><div class="overflow-x-auto"><table class="min-w-full divide-y divide-gray-200"><thead class="bg-gray-50"><tr><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Produktnavn</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Kategori</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Pris</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Lager</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th><th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Handlinger</th></tr></thead><tbody class="bg-white divide-y divide-gray-200"><tr><td class="px-6 py-4 whitespace-nowrap"><div class="flex items-center"><img src="https://creatie.ai/ai/api/search-image?query=modern%20smartphone&width=100&height=100&flag=5d97ac2b-7dce-4c35-857c-42e2c4d1a0d9&flag=136c9db7-917b-4dc5-9ef2-347f6c392dff" alt="Product" class="w-10 h-10 rounded-lg mr-3"/><div><div class="text-sm font-medium text-gray-900">Smartphone Pro Max</div><div class="text-sm text-gray-500">SKU: SP-001</div></div></div></td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Elektronik</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">$999.00</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">125</td><td class="px-6 py-4 whitespace-nowrap"><span class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">På Lager</span></td><td class="px-6 py-4 whitespace-nowrap text-sm font-medium"><button class="text-custom hover:text-custom-dark mr-3"><i class="fas fa-edit"></i></button><button class="text-red-600 hover:text-red-900"><i class="fas fa-trash"></i></button></td></tr><tr><td class="px-6 py-4 whitespace-nowrap"><div class="flex items-center"><img src="https://creatie.ai/ai/api/search-image?query=wireless%20earbuds&width=100&height=100&flag=91826eab-7622-46d3-9d5c-832c93844457&flag=cf3d8bd6-d021-4fc9-a858-7bbae969a6d0" alt="Product" class="w-10 h-10 rounded-lg mr-3"/><div><div class="text-sm font-medium text-gray-900">Wireless Earbuds</div><div class="text-sm text-gray-500">SKU: WE-002</div></div></div></td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Elektronik</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">$159.00</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">89</td><td class="px-6 py-4 whitespace-nowrap"><span class="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">På Lager</span></td><td class="px-6 py-4 whitespace-nowrap text-sm font-medium"><button class="text-custom hover:text-custom-dark mr-3"><i class="fas fa-edit"></i></button><button class="text-red-600 hover:text-red-900"><i class="fas fa-trash"></i></button></td></tr><tr><td class="px-6 py-4 whitespace-nowrap"><div class="flex items-center"><img src="https://creatie.ai/ai/api/search-image?query=smart%20watch&width=100&height=100&flag=7accd759-d165-4d09-84b7-265553d847ba&flag=dae1da05-d41f-4b10-878a-f71fe27bb33c" alt="Product" class="w-10 h-10 rounded-lg mr-3"/><div><div class="text-sm font-medium text-gray-900">Smart Watch Series 5</div><div class="text-sm text-gray-500">SKU: SW-003</div></div></div></td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Elektronik</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">$299.00</td><td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">0</td><td class="px-6 py-4 whitespace-nowrap"><span class="px-2 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">Ikke På Lager</span></td><td class="px-6 py-4 whitespace-nowrap text-sm font-medium"><button class="text-custom hover:text-custom-dark mr-3"><i class="fas fa-edit"></i></button><button class="text-red-600 hover:text-red-900"><i class="fas fa-trash"></i></button></td></tr></tbody></table></div><div class="px-6 py-4 border-t border-gray-200"><div class="flex items-center justify-between"><div class="text-sm text-gray-700">Viser 1 til 3 af 50 resultater</div><div class="flex space-x-2"><button class="px-3 py-2 border border-gray-300 rounded-lg disabled:opacity-50">Forrige</button><button class="px-3 py-2 border border-gray-300 rounded-lg">Næste</button></div></div></div></div></main>
+        </div>
+    </div>
+    <script type="module">
+        import { productAPI } from './js/admin.js';
+
+        // Initialize product management functionality
+        async function initializeProductManagement() {
+            try {
+                const products = await productAPI.getAllProducts();
+                renderProductTable(products);
+            } catch (error) {
+                console.error('Failed to initialize product management:', error);
+            }
+        }
+
+        // Render product table
+        function renderProductTable(products) {
+            const tableBody = document.querySelector('tbody');
+            tableBody.innerHTML = products.map(product => `
+                <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="flex items-center">
+                            <img src="${product.imageUrl}" alt="${product.name}" class="w-10 h-10 rounded-lg mr-3"/>
+                            <div>
+                                <div class="text-sm font-medium text-gray-900">${product.name}</div>
+                                <div class="text-sm text-gray-500">SKU: ${product.sku}</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${product.category}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">$${product.price.toFixed(2)}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${product.stock}</td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <span class="px-2 py-1 text-xs font-medium ${product.stock > 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'} rounded-full">
+                            ${product.stock > 0 ? 'På Lager' : 'Ikke På Lager'}
+                        </span>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                        <button onclick="editProduct(${product.id})" class="text-custom hover:text-custom-dark mr-3"><i class="fas fa-edit"></i></button>
+                        <button onclick="deleteProduct(${product.id})" class="text-red-600 hover:text-red-900"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        // Initialize the page
+        initializeProductManagement();
+
+        const salesChart = echarts.init(document.getElementById('salesChart'));
+        const productsChart = echarts.init(document.getElementById('productsChart'));
+        const salesOption = {
+            animation: false,
+            tooltip: {
+                trigger: 'axis'
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [{
+                data: [820, 932, 901, 934, 1290, 1330],
+                type: 'line',
+                smooth: true,
+                itemStyle: {
+                    color: '#4F46E5'
+                }
+            }]
+        };
+        const productsOption = {
+            animation: false,
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                orient: 'horizontal',
+                bottom: 'bottom'
+            },
+            series: [{
+                name: 'Top Products',
+                type: 'pie',
+                radius: '50%',
+                data: [
+                    { value: 1048, name: 'Electronics' },
+                    { value: 735, name: 'Fashion' },
+                    { value: 580, name: 'Home' },
+                    { value: 484, name: 'Sports' }
+                ],
+                emphasis: {
+                    itemStyle: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }]
+        };
+        salesChart.setOption(salesOption);
+        productsChart.setOption(productsOption);
+        window.addEventListener('resize', function() {
+            salesChart.resize();
+            productsChart.resize();
+        });
+    </script>

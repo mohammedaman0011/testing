@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Admin Dashboard - Order Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="small"></script>
+</head>
+<body class="bg-gray-50 font-['Inter']">
+    <div class="min-h-screen flex">
+        <aside class="w-64 bg-white border-r border-gray-200">
+            <div class="p-6">
+                <a href="index.html"><img src="https://ai-public.creatie.ai/gen_page/logo_placeholder.png" alt="Logo" class="h-8"/></a>
+            </div>
+            <nav class="mt-6">
+                <div class="px-4 space-y-1">
+                    <a href="adminpanelDashboard.html" class="flex items-center px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-chart-line w-5 h-5 mr-3"></i>Dashboard</a>
+                    <a href="adminpanel.productmanagementpage.html" class="flex items-center px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-box w-5 h-5 mr-3"></i>Produkter</a>
+                    <a href="adminpanel.ordermanagementpage.html" class="flex items-center px-4 py-3 text-sm font-medium text-custom bg-indigo-50 rounded-lg"><i class="fas fa-shopping-cart w-5 h-5 mr-3"></i>Ordrer</a>
+                    <a href="#" class="flex items-center px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-users w-5 h-5 mr-3"></i>Kunder</a>
+                    <a href="#" class="flex items-center px-4 py-3 text-sm font-medium text-gray-600 hover:bg-gray-50 rounded-lg"><i class="fas fa-chart-bar w-5 h-5 mr-3"></i>Analyser</a>
+                </div>
+            </nav>
+        </aside>
+        <div class="flex-1">
+            <header class="bg-white shadow">
+                <div class="flex items-center justify-between px-6 h-16">
+                    <h1 class="text-xl font-semibold">Ordrer</h1>
+                    <div class="flex items-center space-x-4">
+                        <button class="p-2 text-gray-400 hover:text-gray-500">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                        <div class="relative">
+                            <button class="flex items-center space-x-3">
+                                <img class="h-8 w-8 rounded-full" src="https://creatie.ai/ai/api/search-image?query=A professional headshot of a business person with a warm smile, wearing a suit, against a neutral background.&width=100&height=100&orientation=squarish" alt="User"/>
+                                <span class="text-sm font-medium text-gray-700">John Smith</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="p-6">
+                <div class="mb-6 flex justify-between items-center">
+                    <h2 class="text-xl font-semibold">Alle Ordrer</h2>
+                    <div class="flex space-x-2">
+                        <select id="statusFilter" class="border border-gray-300 rounded-lg px-3 py-2">
+                            <option value="">Alle Statusser</option>
+                            <option value="PENDING">Afventer</option>
+                            <option value="CONFIRMED">Bekræftet</option>
+                            <option value="PROCESSING">Behandler</option>
+                            <option value="SHIPPED">Afsendt</option>
+                            <option value="DELIVERED">Leveret</option>
+                            <option value="CANCELLED">Annulleret</option>
+                        </select>
+                        <button class="px-4 py-2 bg-custom text-white rounded-lg flex items-center">
+                            <i class="fas fa-download mr-2"></i>Eksportér
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow">
+                    <div class="p-6 border-b border-gray-200">
+                        <div class="flex justify-between items-center">
+                            <div class="relative w-64">
+                                <input type="text" id="searchOrder" placeholder="Søg ordrer..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom focus:border-transparent"/>
+                                <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="px-3 py-2 border border-gray-300 rounded-lg flex items-center">
+                                    <i class="fas fa-filter mr-2"></i>Filtrer
+                                </button>
+                                <button class="px-3 py-2 border border-gray-300 rounded-lg flex items-center">
+                                    <i class="fas fa-sort mr-2"></i>Sortér
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Ordre ID</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Kunde</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Dato</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Total</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Handlinger</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200" id="orderTableBody">
+                                <!-- Orders will be dynamically inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="px-6 py-4 border-t border-gray-200">
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-gray-700" id="orderCount">Loading...</div>
+                            <div class="flex space-x-2">
+                                <button class="px-3 py-2 border border-gray-300 rounded-lg disabled:opacity-50" id="prevPage">Forrige</button>
+                                <button class="px-3 py-2 border border-gray-300 rounded-lg" id="nextPage">Næste</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script type="module">
+        import { orderAPI } from './js/admin.js';
+
+        let currentPage = 1;
+        let currentStatus = '';
+        let orders = [];
+
+        // Initialize order management
+        async function initializeOrderManagement() {
+            try {
+                await loadOrders();
+                setupEventListeners();
+            } catch (error) {
+                console.error('Failed to initialize order management:', error);
+            }
+        }
+
+        // Load orders
+        async function loadOrders() {
+            try {
+                orders = currentStatus
+                    ? await orderAPI.getOrdersByStatus(currentStatus)
+                    : await orderAPI.getAllOrders();
+                renderOrderTable(orders);
+            } catch (error) {
+                console.error('Error loading orders:', error);
+            }
+        }
+
+        // Render order table
+        function renderOrderTable(orders) {
+            const tableBody = document.getElementById('orderTableBody');
+            const orderCount = document.getElementById('orderCount');
+
+            tableBody.innerHTML = orders.map(order => `
+                <tr>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm">#${order.id}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm">${order.customerName}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm">${new Date(order.createdAt).toLocaleDateString()}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm">$${order.total.toFixed(2)}</td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <select onchange="updateOrderStatus(${order.id}, this.value)" class="px-2 py-1 text-xs font-medium rounded-full ${getStatusStyle(order.status)}">
+                            ${generateStatusOptions(order.status)}
+                        </select>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                        <button onclick="viewOrderDetails(${order.id})" class="text-custom hover:text-custom-dark mr-3">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </td>
+                </tr>
+            `).join('');
+
+            orderCount.textContent = `Viser ${orders.length} ordrer`;
+        }
+
+        // Get status style
+        function getStatusStyle(status) {
+            const styles = {
+                'PENDING': 'bg-yellow-100 text-yellow-800',
+                'CONFIRMED': 'bg-blue-100 text-blue-800',
+                'PROCESSING': 'bg-purple-100 text-purple-800',
+                'SHIPPED': 'bg-indigo-100 text-indigo-800',
+                'DELIVERED': 'bg-green-100 text-green-800',
+                'CANCELLED': 'bg-red-100 text-red-800'
+            };
+            return styles[status] || 'bg-gray-100 text-gray-800';
+        }
+
+        // Generate status options
+        function generateStatusOptions(currentStatus) {
+            const statuses = [
+                ['PENDING', 'Afventer'],
+                ['CONFIRMED', 'Bekræftet'],
+                ['PROCESSING', 'Behandler'],
+                ['SHIPPED', 'Afsendt'],
+                ['DELIVERED', 'Leveret'],
+                ['CANCELLED', 'Annulleret']
+            ];
+
+            return statuses.map(([value, label]) =>
+                `<option value="${value}" ${value === currentStatus ? 'selected' : ''}>${label}</option>`
+            ).join('');
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            const statusFilter = document.getElementById('statusFilter');
+            const searchInput = document.getElementById('searchOrder');
+
+            statusFilter.addEventListener('change', async (e) => {
+                currentStatus = e.target.value;
+                await loadOrders();
+            });
+
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                const filteredOrders = orders.filter(order =>
+                    order.id.toString().includes(searchTerm) ||
+                    order.customerName.toLowerCase().includes(searchTerm)
+                );
+                renderOrderTable(filteredOrders);
+            });
+        }
+
+        // Update order status
+        window.updateOrderStatus = async (orderId, newStatus) => {
+            try {
+                await orderAPI.updateOrderStatus(orderId, newStatus);
+                await loadOrders();
+            } catch (error) {
+                console.error('Error updating order status:', error);
+            }
+        };
+
+        // View order details
+        window.viewOrderDetails = (orderId) => {
+            // Implement order details view
+            console.log('Viewing order details:', orderId);
+        };
+
+        // Initialize the page
+        initializeOrderManagement();
+    </script>
+</body></html>

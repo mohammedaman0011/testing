@@ -1,16 +1,46 @@
-.DS_Store
-node_modules/
-.env
-.env.local
-.env.*.local
+# Compiled class files and build artifacts
+target/
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Maven specific
+.mvn/
+maven-wrapper.properties
+apache-maven-*/
+
+# IDE specific files
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.project
+.classpath
+.settings/
+
+# Logs
 *.log
+log/
+logs/
+
+# Node.js
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.vscode/
-.idea/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+
+# Environment files
+.env
+.env.local
+.env.*.local
+application-*.properties
+application-*.yml
+!application.properties
+
+# OS specific
+.DS_Store
+Thumbs.db

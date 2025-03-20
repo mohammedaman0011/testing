@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Shopping Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="small"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <nav class="bg-white border-b">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html"><img class="h-8 w-auto" src="https://ai-public.creatie.ai/gen_page/logo_placeholder.png" alt="Logo"/></a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="productlistingpage.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Produkter</a>
+                        <a href="search.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Søg</a>
+                        <a href="cartpage.html" class="border-custom text-custom inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Kurv</a>
+                        <a href="Signin.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Log ind</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="flex items-center space-x-4">
+                        <a href="Signin.html" class="text-gray-500 hover:text-custom"><i class="far fa-user text-lg"></i></a>
+                        <a href="index.html" class="text-gray-500 hover:text-custom">Continue Shopping</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-2xl font-semibold text-gray-900">Din Indkøbskurv (3)</h1>
+            <a href="#" class="text-custom hover:text-custom/80 font-medium">Fortsæt med at Handle</a>
+        </div>
+        <div class="lg:grid lg:grid-cols-12 lg:gap-x-12 lg:items-start">
+            <div class="lg:col-span-7">
+                <div class="space-y-6">
+                    <div class="bg-white rounded-lg shadow p-6 flex items-center space-x-6">
+                        <img src="https://creatie.ai/ai/api/search-image?query=A premium wireless headphone in sleek black design with premium leather cushions and metallic accents, photographed on a clean white background with soft shadows, product photography style&width=200&height=200&orientation=squarish&flag=fac764c3-affa-40d5-8262-7b83b55728fe&flag=5a06dc91-bf6a-433b-aefe-3cd8584a9370" alt="Headphones" class="w-24 h-24 object-cover rounded-md"/>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <div>
+                                    <h3 class="text-lg font-medium text-gray-900">Premium Trådløse Hovedtelefoner</h3>
+                                    <p class="mt-1 text-sm text-gray-500">Sort | Læder</p>
+                                </div>
+                                <button class="text-gray-400 hover:text-gray-500">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center">
+                                <div class="flex items-center border rounded-lg">
+                                    <button class="px-3 py-1 text-gray-600 hover:text-custom !rounded-button">-</button>
+                                    <span class="px-3 py-1 border-x">1</span>
+                                    <button class="px-3 py-1 text-gray-600 hover:text-custom !rounded-button">+</button>
+                                </div>
+                                <p class="text-lg font-medium text-gray-900">$299.99</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6 flex items-center space-x-6">
+                        <img src="https://creatie.ai/ai/api/search-image?query=A sleek smartwatch with metal band and digital display showing fitness tracking interface, photographed on a clean white background with soft shadows, product photography style&width=200&height=200&orientation=squarish&flag=bb22eca4-a26b-423b-883b-688dbdf3a492&flag=a648ee37-c5e7-4bc3-a5b8-359ee07d2f4d" alt="Smartwatch" class="w-24 h-24 object-cover rounded-md"/>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <div>
+                                    <h3 class="text-lg font-medium text-gray-900">Smart Fitness Ur</h3>
+                                    <p class="mt-1 text-sm text-gray-500">Sølv | 44mm</p>
+                                </div>
+                                <button class="text-gray-400 hover:text-gray-500">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center">
+                                <div class="flex items-center border rounded-lg">
+                                    <button class="px-3 py-1 text-gray-600 hover:text-custom !rounded-button">-</button>
+                                    <span class="px-3 py-1 border-x">2</span>
+                                    <button class="px-3 py-1 text-gray-600 hover:text-custom !rounded-button">+</button>
+                                </div>
+                                <p class="text-lg font-medium text-gray-900">$249.99</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6 flex items-center space-x-6">
+                        <img src="https://creatie.ai/ai/api/search-image?query=A premium leather wallet in brown color with multiple card slots and coin pocket visible, photographed on a clean white background with soft shadows, product photography style&width=200&height=200&orientation=squarish&flag=fdfa9ca8-6dad-4eb5-a012-61333025fe0b&flag=784bc010-ade5-4412-b0ba-672abb5a4ea8" alt="Wallet" class="w-24 h-24 object-cover rounded-md"/>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <div>
+                                    <h3 class="text-lg font-medium text-gray-900">Læder Pung</h3>
+                                    <p class="mt-1 text-sm text-gray-500">Brun | Ægte Læder</p>
+                                </div>
+                                <button class="text-gray-400 hover:text-gray-500">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <div class="mt-4 flex justify-between items-center">
+                                <div class="flex items-center border rounded-lg">
+                                    <button class="px-3 py-1 text-gray-600 hover:text-custom !rounded-button">-</button>
+                                    <span class="px-3 py-1 border-x">1</span>
+                                    <button class="px-3 py-1 text-gray-600 hover:text-custom !rounded-button">+</button>
+                                </div>
+                                <p class="text-lg font-medium text-gray-900">$79.99</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-5 mt-8 lg:mt-0">
+                <div class="bg-white rounded-lg shadow p-6 space-y-6">
+                    <h2 class="text-lg font-medium text-gray-900">Ordreoversigt</h2>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between">
+                            <p class="text-gray-600">Subtotal</p>
+                            <p class="text-gray-900 font-medium">$879.96</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <p class="text-gray-600">Forsendelse</p>
+                            <p class="text-gray-900 font-medium">Gratis</p>
+                        </div>
+                        <div class="flex justify-between pt-4 border-t">
+                            <p class="text-lg font-medium text-gray-900">Total</p>
+                            <p class="text-lg font-medium text-custom">$879.96</p>
+                        </div>
+                    </div>
+                    <button class="w-full bg-custom text-white py-3 !rounded-button hover:bg-custom/90 font-medium">Gå til Betaling</button>
+                </div>
+                <div class="mt-6 bg-white rounded-lg shadow p-6">
+                    <h3 class="text-sm font-medium text-gray-900">Accepterede Betalingsmetoder</h3>
+                    <div class="mt-4 flex space-x-4">
+                        <i class="fab fa-cc-visa text-3xl text-gray-400"></i>
+                        <i class="fab fa-cc-mastercard text-3xl text-gray-400"></i>
+                        <i class="fab fa-cc-amex text-3xl text-gray-400"></i>
+                        <i class="fab fa-cc-paypal text-3xl text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hidden mt-16 text-center">
+            <img src="https://creatie.ai/ai/api/search-image?query=A 3D vector-style image with a clean, solid background color that contrasts significantly with the main theme. The content includes an empty shopping cart illustration with a subtle shadow&width=400&height=300&orientation=landscape&removebg=true&flag=8869f480-63b2-4e90-9009-35ba17a64140&flag=77e0e78b-cb4c-4698-bffe-7db50384c57a" alt="Empty cart" class="mx-auto w-72"/>
+            <h2 class="mt-8 text-2xl font-medium text-gray-900">Din kurv er tom</h2>
+            <p class="mt-2 text-gray-500">Det ser ud til, at du ikke har tilføjet noget til din kurv endnu</p>
+            <button class="mt-8 bg-custom text-white px-8 py-3 !rounded-button hover:bg-custom/90 font-medium">Start Shopping</button>
+        </div>
+    </main>
+    <footer class="bg-white border-t mt-24">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">BUTIK</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-gray-500 hover:text-custom">Nyheder</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-custom">Bestsellere</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-custom">Udsalg</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">SUPPORT</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-gray-500 hover:text-custom">Hjælpecenter</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-custom">Returvarer</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-custom">Kontakt Os</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">VIRKSOMHED</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-gray-500 hover:text-custom">Om Os</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-custom">Karriere</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-custom">Presse</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">JURIDISK</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-gray-500 hover:text-custom">Privatlivspolitik</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-custom">Handelsbetingelser</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-custom">Cookie Politik</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t pt-8 flex items-center justify-between">
+                <p class="text-gray-400 text-sm">© 2024 Virksomhed, Inc. Alle rettigheder forbeholdes.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-custom">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-custom">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-custom">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>

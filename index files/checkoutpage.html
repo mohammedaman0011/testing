@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Kasse - Din ordre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="small"></script>
+</head>
+<body class="bg-gray-50 font-[Inter]">
+    <nav class="bg-white border-b border-gray-200">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html"><img class="h-8 w-auto" src="https://ai-public.creatie.ai/gen_page/logo_placeholder.png" alt="Logo"/></a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="hidden md:ml-4 md:flex md:items-center">
+                        <a href="Signin.html" class="!rounded-button bg-custom text-white px-4 py-2 text-sm font-medium">Log ind</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-x-12 lg:items-start">
+            <div class="lg:col-span-7">
+                <div class="bg-white shadow rounded-lg mb-8 p-6">
+                    <h2 class="text-lg font-medium text-gray-900 mb-6">Godkendelse</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" placeholder="Indtast din e-mail"/>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Password</label>
+                            <input type="password" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" placeholder="Indtast din adgangskode"/>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <button class="!rounded-button bg-custom text-white px-6 py-2 text-sm font-medium">Log ind</button>
+                            <span class="text-sm text-gray-500">eller</span>
+                            <button class="!rounded-button bg-white border border-gray-300 text-gray-700 px-6 py-2 text-sm font-medium">Fortsæt som gæst</button>
+                        </div>
+                        <div class="flex items-center space-x-4 mt-4">
+                            <button class="!rounded-button flex items-center justify-center w-full bg-white border border-gray-300 text-gray-700 px-6 py-2 text-sm font-medium"><i class="fab fa-google mr-2"></i> Fortsæt med Google</button>
+                            <button class="!rounded-button flex items-center justify-center w-full bg-white border border-gray-300 text-gray-700 px-6 py-2 text-sm font-medium"><i class="fab fa-facebook mr-2"></i> Fortsæt med Facebook</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white shadow rounded-lg mb-8 p-6">
+                    <h2 class="text-lg font-medium text-gray-900 mb-6">Leveringsadresse</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Gemte adresser</label>
+                            <select class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                                <option>Vælg en gemt adresse</option>
+                                <option>123 Main St, Apt 4B, New York, NY 10001</option>
+                                <option>456 Park Ave, Suite 789, New York, NY 10022</option>
+                            </select>
+                        </div>
+                        <button class="!rounded-button flex items-center text-custom border border-custom px-4 py-2 text-sm font-medium"><i class="fas fa-plus mr-2"></i> Tilføj ny adresse</button>
+                        <div class="aspect-w-16 aspect-h-9">
+                            <img src="https://ai-public.creatie.ai/gen_page/map_placeholder_1280x720.png" alt="Map" class="object-cover rounded-lg"/>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Lejlighed/Etage</label>
+                            <input type="text" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" placeholder="Indtast lejligheds- eller etagenummer"/>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Leveringsinstruktioner</label>
+                            <textarea class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows="3" placeholder="Tilføj særlige leveringsinstruktioner"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white shadow rounded-lg mb-8 p-6">
+                    <h2 class="text-lg font-medium text-gray-900 mb-6">Betalingsmetode</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center p-4 border border-gray-200 rounded-lg">
+                            <input type="radio" name="payment" class="h-4 w-4 text-custom border-gray-300" checked=""/>
+                            <label class="ml-3">
+                                <span class="block text-sm font-medium text-gray-900">Kontant ved levering</span>
+                                <span class="block text-sm text-gray-500">Betal når din ordre ankommer</span>
+                            </label>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <p class="text-sm text-gray-600">Flere betalingsmetoder kommer snart!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-5">
+                <div class="bg-white shadow rounded-lg p-6 sticky top-6">
+                    <h2 class="text-lg font-medium text-gray-900 mb-6">Ordresammendrag</h2>
+                    <div class="flow-root">
+                        <ul class="divide-y divide-gray-200">
+                            <li class="py-4 flex">
+                                <img src="https://creatie.ai/ai/api/search-image?query=A professional product photography of a modern minimalist white sneaker on a clean light gray background, showing perfect detail and texture&width=100&height=100&orientation=squarish&flag=93f89c32-f197-463e-8c1c-12a40669fafe&flag=b0902f51-113b-4ee5-b875-4f23abfed98a&flag=4d589ebb-ddaa-4539-bfe9-3dd9a88019c4" alt="Product" class="h-20 w-20 rounded-md object-cover"/>
+                                <div class="ml-4 flex-1">
+                                    <div class="flex justify-between">
+                                        <h3 class="text-sm font-medium text-gray-900">Klassiske hvide sneakers</h3>
+                                        <p class="text-sm font-medium text-gray-900">$95.00</p>
+                                    </div>
+                                    <p class="mt-1 text-sm text-gray-500">Størrelse: 42 | Antal: 1</p>
+                                </div>
+                            </li>
+                            <li class="py-4 flex">
+                                <img src="https://creatie.ai/ai/api/search-image?query=A professional product photography of a black leather wallet on a clean light gray background, showing perfect detail and texture&width=100&height=100&orientation=squarish&flag=229ed047-b8cb-434a-8090-bcc6921ec959&flag=07122d1f-e227-4ffb-9a14-8cc2a21885aa&flag=88c5c067-e884-46cc-8690-c03ae75c21c3" alt="Product" class="h-20 w-20 rounded-md object-cover"/>
+                                <div class="ml-4 flex-1">
+                                    <div class="flex justify-between">
+                                        <h3 class="text-sm font-medium text-gray-900">Læder tegnebog</h3>
+                                        <p class="text-sm font-medium text-gray-900">$45.00</p>
+                                    </div>
+                                    <p class="mt-1 text-sm text-gray-500">Farve: Sort | Antal: 1</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <dl class="mt-6 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <dt class="text-sm text-gray-600">Subtotal</dt>
+                            <dd class="text-sm font-medium text-gray-900">$140.00</dd>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <dt class="text-sm text-gray-600">Leveringsgebyr</dt>
+                            <dd class="text-sm font-medium text-gray-900">$5.00</dd>
+                        </div>
+                        <div class="flex items-center justify-between border-t border-gray-200 pt-4">
+                            <dt class="text-base font-medium text-gray-900">Total</dt>
+                            <dd class="text-base font-medium text-gray-900">$145.00</dd>
+                        </div>
+                    </dl>
+                    <div class="mt-6">
+                        <div class="flex items-center mb-4">
+                            <input type="checkbox" class="h-4 w-4 text-custom border-gray-300 rounded"/>
+                            <label class="ml-2 text-sm text-gray-600">Jeg accepterer vilkår og betingelser</label>
+                        </div>
+                        <button class="!rounded-button w-full bg-custom text-white px-6 py-3 text-base font-medium">Afgiv ordre</button>
+                        <p class="mt-4 text-sm text-gray-500 text-center">Ordrer kan annulleres inden for 1 time efter placering</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-white border-t border-gray-200 mt-12">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">Hjælp</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Forsendelse</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Returneringer</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">Virksomhed</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Om os</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Blog</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Karriere</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">Juridisk</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Privatlivspolitik</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Vilkår</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-900 tracking-wider uppercase">Social</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Facebook</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Instagram</a></li>
+                        <li><a href="#" class="text-base text-gray-500 hover:text-gray-900">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
+                <div class="flex space-x-6 md:order-2">
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+                <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">© 2024 Dit Firma. Alle rettigheder forbeholdes.</p>
+            </div>
+        </div>
+    </footer>
