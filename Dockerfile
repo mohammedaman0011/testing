@@ -8,14 +8,14 @@ WORKDIR /app
 COPY pom.xml .
 
 # Download dependencies and plugins (this layer will be cached)
-RUN --mount=type=cache,target=/root/.m2/repository \
+RUN --mount=type=cache,id=maven-deps,target=/root/.m2/repository \
     mvn dependency:go-offline
 
 # Copy the rest of the application
 COPY . .
 
 # Build the application with caching
-RUN --mount=type=cache,target=/root/.m2/repository \
+RUN --mount=type=cache,id=maven-deps,target=/root/.m2/repository \
     mvn clean package -DskipTests
 
 # Use Java runtime for the final image
